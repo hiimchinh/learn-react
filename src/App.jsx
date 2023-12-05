@@ -1,4 +1,5 @@
 import "./App.css";
+import Clicker from "./Clicker";
 import ColorList from "./ColorList";
 import DoubleDice from "./DoubleDice";
 import PropertyList from "./PropertyList";
@@ -22,9 +23,10 @@ function App() {
   ];
   return (
     <>
-      <div>
+      <Clicker message="Hello World" buttonClick="Do not click!" />
+      {/* <div>
         <PropertyList properties={properties} />
-      </div>
+      </div> */}
       {/* <ShoppingList items={shoppingListData} /> */}
       {/* <Slots val1="1" val2="2" val3="3"/>
       <Slots val1="1" val2="1" val3="1"/> */}
