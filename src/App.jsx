@@ -1,6 +1,7 @@
 import "./App.css";
 import Clicker from "./Clicker";
 import ColorList from "./ColorList";
+import Counter from "./Counter";
 import DoubleDice from "./DoubleDice";
 import PropertyList from "./PropertyList";
 import ShoppingList from "./ShoppingList";
@@ -23,7 +24,8 @@ function App() {
   ];
   return (
     <>
-      <Clicker message="Hello World" buttonClick="Do not click!" />
+      <Counter />
+      {/* <Clicker message="Hello World" buttonClick="Do not click!" /> */}
       {/* <div>
         <PropertyList properties={properties} />
       </div> */}
