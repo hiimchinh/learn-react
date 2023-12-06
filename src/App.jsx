@@ -6,6 +6,7 @@ import DoubleDice from "./DoubleDice";
 import PropertyList from "./PropertyList";
 import ShoppingList from "./ShoppingList";
 import Slots from "./Slots";
+import Toggler from "./Toggler";
 
 function App() {
   const shoppingListData = [
@@ -24,7 +25,8 @@ function App() {
   ];
   return (
     <>
-      <Counter />
+      <Toggler />
+      {/* <Counter /> */}
       {/* <Clicker message="Hello World" buttonClick="Do not click!" /> */}
       {/* <div>
         <PropertyList properties={properties} />
