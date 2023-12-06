@@ -1,11 +1,14 @@
 import { useState } from "react";
 import "./ColorBox.css";
-export default function ColorBox() {
-  const [color, setColor] = useState("red");
+
+function randomChoice(list) {
+  const index = Math.floor(Math.random() * list.length);
+  return list[index];
+}
+export default function ColorBox({ colors }) {
+  const [color, setColor] = useState(randomChoice(colors));
   const changeColor = () => {
-    setColor(
-      "#" + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, "0")
-    );
+    setColor(randomChoice(colors));
   };
   return (
     <div
