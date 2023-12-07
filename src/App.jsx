@@ -1,6 +1,7 @@
 import "./App.css";
 import Clicker from "./Clicker";
 import ColorBox from "./ColorBox";
+import ColorBoxList from "./ColorBoxList";
 import ColorList from "./ColorList";
 import Counter from "./Counter";
 import DoubleDice from "./DoubleDice";
@@ -45,7 +46,8 @@ function App() {
   ];
   return (
     <>
-      <ColorBox colors={colors} />
+      <ColorBoxList colors={colors} rows={6} columns={4} />
+      {/* <ColorBox colors={colors} /> */}
       {/* <Toggler /> */}
       {/* <Counter /> */}
       {/* <Clicker message="Hello World" buttonClick="Do not click!" /> */}
