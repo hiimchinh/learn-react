@@ -1,8 +1,10 @@
 import "./Die.css";
-function Die({ value }) {
+function Die({ value, color = "blue" }) {
     return (
         <>
-            <div className="Die">{value}</div>
+            <div className="Die" style={{ backgroundColor: color }}>
+                {value}
+            </div>
         </>
     );
 }
