@@ -1,14 +1,12 @@
 import "./App.css";
-import ScoreKeeper2 from "./ScoreKeeper2";
-// import EmojiClicker from "./EmojiClicker";
+import Dice from "./LuckyN/Dice.jsx";
 
 function App() {
-  return (
-    <>
-      <ScoreKeeper2 numPlayers={3} target={3} />
-      {/* <EmojiClicker /> */}
-    </>
-  );
+    return (
+        <>
+            <Dice dice={[1, 2, 3]} />
+        </>
+    );
 }
 
 export default App;
