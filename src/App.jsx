@@ -1,12 +1,10 @@
 import "./App.css";
-import Box from "./Box.jsx";
+import BoxGrid from "./BoxGrid.jsx";
 
 function App() {
     return (
         <>
-            <Box />
-            <Box />
-            <Box />
+            <BoxGrid />
         </>
     );
 }
