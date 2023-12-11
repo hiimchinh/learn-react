@@ -1,5 +1,5 @@
 import "./App.css";
-import BoxGrid from "./BoxGrid.jsx";
+import BoxGrid from "./state/BoxGrid.jsx";
 
 function App() {
     return (
