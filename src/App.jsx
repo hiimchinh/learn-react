@@ -1,11 +1,10 @@
 import "./App.css";
-
-import SignupForm from "./form/SignupForm.jsx";
+import ShoppingListForm from "./form/ShoppingListForm.jsx";
 
 function App() {
     return (
         <>
-            <SignupForm />
+            <ShoppingListForm />
         </>
     );
 }
