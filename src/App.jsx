@@ -1,10 +1,11 @@
 import "./App.css";
-import BoxGrid from "./state/BoxGrid.jsx";
+
+import SignupForm from "./form/SignupForm.jsx";
 
 function App() {
     return (
         <>
-            <BoxGrid />
+            <SignupForm />
         </>
     );
 }
