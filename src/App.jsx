@@ -1,10 +1,10 @@
 import "./App.css";
-import ShoppingListForm from "./form/ShoppingListForm.jsx";
+import ShoppingList from "./form/ShoppingList.jsx";
 
 function App() {
     return (
         <>
-            <ShoppingListForm />
+            <ShoppingList />
         </>
     );
 }

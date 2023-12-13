@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function ShoppingListForm() {
+function ShoppingListForm({ addItem }) {
     const [formData, setFormData] = useState({
         product: "",
         quantity: 0,
@@ -15,8 +15,12 @@ function ShoppingListForm() {
             };
         });
     };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        addItem(formData);
+    };
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <h1>Product is: {formData.product}</h1>
             <label htmlFor="product">Product name</label>
             <input
@@ -34,6 +38,7 @@ function ShoppingListForm() {
                 value={formData.quantity}
                 onChange={handleUpdateForm}
             />
+            <button>Add product to cart</button>
         </form>
     );
 }
