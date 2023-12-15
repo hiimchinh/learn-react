@@ -18,10 +18,10 @@ function ShoppingListForm({ addItem }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         addItem(formData);
+        setFormData({ product: "", quantity: 0 });
     };
     return (
         <form onSubmit={handleSubmit}>
-            <h1>Product is: {formData.product}</h1>
             <label htmlFor="product">Product name</label>
             <input
                 type="text"
@@ -30,6 +30,12 @@ function ShoppingListForm({ addItem }) {
                 value={formData.product}
                 onChange={handleUpdateForm}
             />
+            {(!formData.product || formData.product.length > 20) && (
+                <span style={{ color: "red" }}>
+                    Product name cannot be empty or > 20
+                </span>
+            )}
+
             <label htmlFor="quantity">Quantity</label>
             <input
                 type="number"
