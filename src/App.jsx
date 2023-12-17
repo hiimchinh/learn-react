@@ -1,10 +1,10 @@
 import "./App.css";
-import ShoppingList from "./form/ShoppingList.jsx";
+import QuoteFetcher from "./effect/QuoteFetcher.jsx";
 
 function App() {
     return (
         <>
-            <ShoppingList />
+            <QuoteFetcher />
         </>
     );
 }
