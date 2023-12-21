@@ -1,10 +1,10 @@
 import "./App.css";
-import ProfileDisplay from "./effect/ProfileDisplay.jsx";
+import FormDemo from "./mui/FormDemo.jsx";
 
 function App() {
     return (
         <>
-            <ProfileDisplay />
+            <FormDemo />
         </>
     );
 }
