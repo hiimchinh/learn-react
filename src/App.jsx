@@ -1,10 +1,10 @@
 import "./App.css";
-import QuoteFetcher from "./effect/QuoteFetcher.jsx";
+import ProfileDisplay from "./effect/ProfileDisplay.jsx";
 
 function App() {
     return (
         <>
-            <QuoteFetcher />
+            <ProfileDisplay />
         </>
     );
 }
