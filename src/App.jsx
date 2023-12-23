@@ -1,10 +1,12 @@
-import "./App.css";
-import Navbar from "./mui/Navbar.jsx";
+// import "./App.css";
+import TodoList from "./todo-list/TodoList.jsx";
+import { CssBaseline } from "@mui/material";
 
 function App() {
     return (
         <>
-            <Navbar />
+            <CssBaseline />
+            <TodoList />
         </>
     );
 }
