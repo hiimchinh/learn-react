@@ -6,6 +6,7 @@ export default function TodoListForm({ addNewItem }) {
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
             addNewItem(item);
+            setItem("");
         }
     };
     return (
