@@ -1,5 +1,6 @@
 import TodoListForm from "./TodoListForm.jsx";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { v4 as uuid } from "uuid";
 import {
     Checkbox,
     List,
@@ -18,6 +19,12 @@ const initTodos = [
 export default function TodoList() {
     const [todos, setTodos] = useState(initTodos);
     const handleToggle = (value) => () => {};
+    const addNewItem = (todoTask) => {
+        const newTodo = { id: uuid(), text: todoTask, completed: false };
+        setTodos((prevTodos) => {
+            return [...prevTodos, newTodo];
+        });
+    };
     return (
         <div>
             <h1>Todos</h1>
@@ -65,7 +72,7 @@ export default function TodoList() {
                     );
                 })}
             </List>
-            <TodoListForm />
+            <TodoListForm addNewItem={addNewItem} />
         </div>
     );
 }
