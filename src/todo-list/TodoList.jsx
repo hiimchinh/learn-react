@@ -14,7 +14,21 @@ const getTodos = () => {
 };
 export default function TodoList() {
     const [todos, setTodos] = useState(getTodos);
-    const handleToggle = (value) => () => {};
+    const handleToggle = (toggledTodo) => {
+        setTodos((prevTodos) => {
+            return prevTodos.map((todo) => {
+                if (todo.id === toggledTodo.id) {
+                    todo.completed = !todo.completed;
+                }
+                return todo;
+            });
+        });
+    };
+    const handleRemove = (removedTodo) => {
+        setTodos((prevTodos) =>
+            prevTodos.filter((todo) => todo.id !== removedTodo.id)
+        );
+    };
     const addNewItem = (todoTask) => {
         const newTodo = { id: uuid(), text: todoTask, completed: false };
         setTodos((prevTodos) => {
@@ -43,6 +57,7 @@ export default function TodoList() {
                             key={todo.id}
                             todo={todo}
                             handleToggle={handleToggle}
+                            handleRemove={handleRemove}
                         />
                     );
                 })}

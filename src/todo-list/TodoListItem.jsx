@@ -8,19 +8,31 @@ import {
     ListItemText,
 } from "@mui/material";
 
-export default function TodoListItem({ todo, handleToggle }) {
+export default function TodoListItem({ todo, handleToggle, handleRemove }) {
     const labelId = `checkbox-list-label-${todo.text}`;
     return (
         <ListItem
             key={todo.id}
             secondaryAction={
-                <IconButton edge="end" aria-label="comments">
+                <IconButton
+                    onClick={() => {
+                        handleRemove(todo);
+                    }}
+                    edge="end"
+                    aria-label="comments"
+                >
                     <ClearIcon />
                 </IconButton>
             }
             disablePadding
         >
-            <ListItemButton role={undefined} onClick={handleToggle(todo)} dense>
+            <ListItemButton
+                onClick={() => {
+                    handleToggle(todo);
+                }}
+                role={undefined}
+                dense
+            >
                 <ListItemIcon>
                     <Checkbox
                         edge="start"
